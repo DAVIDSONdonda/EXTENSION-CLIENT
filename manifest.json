@@ -24,7 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://onlyfaucet.com/faucet/currency/usdt"
+        "https://exemple.com"
       ],
       "js": [
         "content.js"
