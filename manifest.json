@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Click – Gemini",
+  "version": "1.2.4",
+  "description": "Automatisation des CAPTCHAs monstres avec Gemini, clics de souris natifs via debugger et bouton Claim Now.",
+  "permissions": [
+    "storage",
+    "downloads",
+    "activeTab",
+    "notifications",
+    "debugger"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Configuration Gemini",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://onlyfaucet.com/faucet/currency/usdt"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
